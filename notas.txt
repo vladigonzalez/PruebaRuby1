@@ -1,4 +1,0 @@
-Alumno: David   Nota: 3.6
-Alumno: Gonzalo   Nota: 4.2
-Alumno: Mai   Nota: 7.6
-Alumno: JP   Nota: 10.0

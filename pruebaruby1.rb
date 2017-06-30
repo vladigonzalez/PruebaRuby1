@@ -1,9 +1,5 @@
 # pruebaruby1.rb
 
-file = File.open('alumnos.csv', 'r')
-alumnos = file.read.split("\n")
-file.close
-
 # ejercicio
 # Creo archivo con promedio
 def creoarchivo(nom,promedio)
@@ -152,4 +148,10 @@ def partida_inicial(opc,alumnos)
   end            
 end                 
 
-partida_inicial(menu_inicial(),alumnos) 
+begin
+	file = File.open('alumnos.csv', 'r')
+	alumnos = file.read.split("\n")
+	file.close
+
+	partida_inicial(menu_inicial(),alumnos) 
+end

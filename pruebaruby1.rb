@@ -1,5 +1,7 @@
 # pruebaruby1.rb
 
+NOTA_BASE = 5
+
 # ejercicio
 # Creo archivo con promedio
 def creoarchivo(nom,promedio)
@@ -21,7 +23,7 @@ def presionatecla()
   puts "+-------------------------------------------------+" 
   puts "" 
 	puts ""
-	x = gets.chomp
+	gets.chomp
 end
 
 # Genera Promedio Alumnos notas
@@ -105,7 +107,7 @@ def menu_inicial()
   puts "|                                                 |" 
   puts "|     2 - Ver  Inasistencias por pantalla         |"
   puts "|                                                 |" 
-  puts "|     3 - Ver Alumnos Aprobados (nota 5)          |"
+  puts "|     3 - Ver Alumnos Aprobados (nota #{NOTA_BASE})          |"
   puts "|                                                 |" 
   puts "|     4 - Salir                                   |"
   puts "|                                                 |" 
@@ -145,7 +147,7 @@ def partida_inicial(opc,alumnos)
   case opc
     when 1 then creoarchivosprom(alumnos) 
     when 2 then verasistencia(alumnos) 
-    when 3 then aprobados(alumnos,5)             
+    when 3 then aprobados(alumnos,NOTA_BASE)             
     when 4 then salida             
     else error()
 			partida_inicial(menu_inicial(),alumnos)     

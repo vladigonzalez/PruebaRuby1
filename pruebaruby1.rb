@@ -84,6 +84,10 @@ def aprobados(arr,notabase)
 	hprom = damepromedio(arr)
 	hprom.each{ |key , val| puts "         #{key}   ===>    #{val}" if val >= notabase}
   puts ""
+  puts "       ALUMNOS REPROBADOS" 
+  puts ""
+	hprom.each{ |key , val| puts "         #{key}   ===>    #{val}" if val < notabase}
+  puts ""
   presionatecla()
 	partida_inicial(menu_inicial(),arr)
 end
